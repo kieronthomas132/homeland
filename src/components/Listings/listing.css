@@ -1,0 +1,113 @@
+.property_listing {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  color: white;
+  font-family: "Outfit", sans-serif;
+}
+
+.listing img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2.5rem;
+  border-radius: 2rem;
+  border: 3px solid #adefd1ff;
+  width: 550px;
+}
+.property_info {
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  display: block;
+  height: 50%;
+  text-align: center;
+}
+
+.property_bio {
+  margin-top: 1rem;
+  font-weight: 200;
+}
+
+.property_bio p {
+  margin: 0.5rem;
+}
+.property_icons {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.property_icons p {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.property_bath,
+.property_bed {
+  display: flex;
+  align-items: center;
+}
+
+.description {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  font-weight: 200;
+}
+h3 {
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.rental_status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.rental_status span {
+  font-weight: 200;
+  color: white;
+}
+
+.rental_status {
+  color: #adefd1ff;
+}
+
+@media only screen and (max-width: 900px) {
+  .property_listing {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .listing img {
+    width: 450px;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .listing img {
+    width: 350px;
+  }
+
+  .property_bio p {
+    margin: 0.2rem;
+    font-size: 0.9rem;
+  }
+  .property_listing {
+    overflow-x:hidden;
+
+  }
+  
+}

@@ -1,0 +1,102 @@
+.header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 1rem;
+  height: auto;
+}
+
+.left {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.right {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.home_img {
+  width: 520px;
+  display: flex;
+  border-radius: 10px;
+  height: 100%;
+  margin-top: 3rem;
+}
+
+.left span {
+  color: #adefd1ff;
+  font-family: "Great Vibes", sans-serif;
+  font-size: 3.2rem;
+}
+.left h3 {
+  color: white;
+  font-family: "Outfit", sans-serif;
+}
+
+.rating {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 3rem;
+    color: white;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.rating p {
+    color:#adefd1ff ;
+    width: 75%;
+    font-size: 0.8rem;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 800px) and (min-width:500px){
+    .home_img {
+        width: 300px;
+    }
+}
+
+
+@media only screen and (max-width: 730px) {
+  .home_img {
+    display: none;
+  }
+
+
+ .motto {
+    font-size: 3rem !important;
+    margin-top: 2rem !important;
+ }
+
+ .left span {
+    font-size: 3rem;
+ }
+
+  .header {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin: 0;
+  }
+
+  .rating {
+    margin-top: 1rem;
+    display: block;
+  }
+
+  .rating li {
+    margin-top:1rem ;
+  }
+
+}

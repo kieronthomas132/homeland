@@ -1,0 +1,82 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.main p {
+  color: white;
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+.main h4 {
+  color: white;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 2rem 0;
+  letter-spacing: 2px;
+}
+
+.properties_list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 16px;
+  padding: 2rem;
+  margin: 0 auto;
+  width: 100%;
+  margin-left: 4rem;
+}
+
+.listing_icon {
+  position: absolute;
+  left: 30%;
+  bottom: 8%;
+}
+
+.property_item img {
+  width: 450px;
+  border-radius: 2rem;
+  border: 4px solid #adefd1ff;
+  position: relative;
+}
+
+.remove_like {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 70%;
+  justify-content: center;
+  padding: 1rem;
+  height: auto;
+}
+
+
+@media  only screen and (max-width: 500px) {
+  .property_item img {
+    width: 300px;
+  }
+  
+}
+
+@media only screen and (max-width: 912px) {
+  .main {
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .properties_list {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .remove_like {
+    width: 100%;
+  }
+}

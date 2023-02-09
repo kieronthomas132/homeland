@@ -1,0 +1,24 @@
+.search_inputs {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 1rem;
+  height: auto;
+}
+
+.MuiFormLabel-root {
+  color: white !important;
+  border-color: white !important;
+}
+
+@media only screen and (max-width: 700px) {
+  .search_inputs {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 1rem;
+  }
+}

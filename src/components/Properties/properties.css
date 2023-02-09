@@ -1,0 +1,92 @@
+.properties {
+    padding: 1rem;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow-y: hidden;
+    width: auto;
+}
+
+
+.listings {
+    margin: 1rem;
+}
+
+.listings p {
+    color: #ADEFD1FF;
+    text-align: center;
+    margin: 0.5rem;
+}
+
+.listings img {
+width: 370px;
+height: 300px;
+border-radius: 10px;
+border: 3px solid #ADEFD1FF;;
+display: flex;
+
+}
+
+.load_icon {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    margin: 2rem 0rem;
+    padding-bottom: 1rem;
+}
+
+.pagination {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 2rem auto;
+    align-items: center;
+    position: relative;
+}
+
+
+.pagination_component {
+    color: #ADEFD1FF;
+    font-size: 1.3rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+.icon {
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 900px) {
+    .properties {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        overflow-x: hidden;
+    }
+
+    .listings img {
+        width: 500px;
+        height: 350px;
+    }
+
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .listings img {
+        width: 300px;
+        height: 200px;
+    }
+    
+}
+

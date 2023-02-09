@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from './components/Navbar/Navbar';
+import './index.css'
+import Search from './components/Search/Search'
+import Header from './components/Header/Header';
+import Listings from './components/Listings/Listings';
+import { Routes, Route, Navigate } from 'react-router-dom'
+import { createContext } from 'react';
+import Favorites from './components/Favorites/Favorites';
+import { useState } from 'react';
+
+
+export const PropertiesArray = createContext()
 
 function App() {
+  const [properties, setProperties] = useState([])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <PropertiesArray.Provider value={[properties, setProperties]} >
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route path='/home' element={<Header />} />
+        </Routes>
+        <Routes>
+          <Route path="/" element={<Navigate replace to="/home" />} />
+          <Route path='/home' element={<Search />} />
+          <Route path='/listings/:id' element={<Listings />} />
+          <Route path='/favorites' element={<Favorites />} />
+        </Routes>
+      </div>
+    </PropertiesArray.Provider>
   );
 }
 
