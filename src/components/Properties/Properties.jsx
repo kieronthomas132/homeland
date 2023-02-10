@@ -6,9 +6,9 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import CircularProgress from "@mui/material/CircularProgress";
-import FavoriteIcon from "@mui/icons-material/Favorite";
 import { IconButton, Pagination, Tooltip } from "@mui/material";
-import DoNotDisturbOnIcon from "@mui/icons-material/DoNotDisturbOn";
+import { MdOutlineDoDisturbOn } from "react-icons/md";
+import { BsFillHeartFill } from "react-icons/bs";
 import { PropertiesArray } from "../../App";
 import { useContext } from "react";
 import { auth } from "../../firebase";
@@ -51,7 +51,6 @@ const Properties = ({
     }
   };
 
-
   useEffect(() => {
     const storedArea = localStorage.getItem("area");
     if (storedArea) {
@@ -82,8 +81,7 @@ const Properties = ({
             minimum_price: minPrice,
           },
           headers: {
-            "X-RapidAPI-Key":
-            process.env.REACT_APP_RAPIDAPI_KEY,
+            "X-RapidAPI-Key": process.env.REACT_APP_RAPIDAPI_KEY,
             "X-RapidAPI-Host": "zoopla.p.rapidapi.com",
           },
         };
@@ -149,15 +147,13 @@ const Properties = ({
                       damping: 10,
                     }}
                   >
-                    <Tooltip title="Favorite this property">
-                      <IconButton onClick={() => addProperty(listing)}>
-                        {selectedId === listing.listing_id ? (
-                          <DoNotDisturbOnIcon sx={{ color: "#db243d" }} />
-                        ) : (
-                          <FavoriteIcon sx={{ color: "#db243d" }} />
-                        )}
-                      </IconButton>
-                    </Tooltip>
+                    <IconButton onClick={() => addProperty(listing)}>
+                      {selectedId === listing.listing_id ? (
+                        <MdOutlineDoDisturbOn style={{ color: "#db243d" }} />
+                      ) : (
+                        <BsFillHeartFill style={{ color: "#db243d" }} />
+                      )}
+                    </IconButton>
                   </motion.div>
                 )}
               </p>

@@ -4,8 +4,7 @@ import axios from "axios";
 import { useParams } from "react-router";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import BathtubIcon from "@mui/icons-material/Bathtub";
-import BedroomParentIcon from "@mui/icons-material/BedroomParent";
+import {MdBathtub, MdOutlineBedroomParent} from 'react-icons/md';
 import Footer from "../Footer/Footer";
 const Listings = () => {
   const { id } = useParams();
@@ -81,10 +80,10 @@ const Listings = () => {
                   <p>{listing.displayable_address}</p>
                   <div className="property_icons">
                     <div className="property_bath">
-                      <BathtubIcon /> <p>{listing.num_bathrooms}</p>
+                      <MdBathtub /> <p>{listing.num_bathrooms}</p>
                     </div>
                     <div className="property_bed">
-                      <BedroomParentIcon /> <p>{listing.num_bedrooms}</p>
+                      <MdOutlineBedroomParent /> <p>{listing.num_bedrooms}</p>
                     </div>
                   </div>
                   <h3>Description:</h3>

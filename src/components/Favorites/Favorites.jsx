@@ -3,7 +3,7 @@ import "./favorites.css";
 import { PropertiesArray } from "../../App";
 import { useContext } from "react";
 import { Tooltip, Typography } from "@mui/material";
-import DoNotDisturbOnIcon from '@mui/icons-material/DoNotDisturbOn';
+import { MdOutlineDoDisturbOn } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 const Favorites = () => {
@@ -60,16 +60,14 @@ const Favorites = () => {
                   damping: 20,
                 }}
               >
-                <Tooltip title="Remove from Favorites">
-                  <DoNotDisturbOnIcon
-                    sx={{
-                      color: "#db243d;",
+                  <MdOutlineDoDisturbOn
+                    style={{
+                      color: "#db243d",
                       fontSize: "2rem",
                       cursor: "pointer",
                     }}
                     onClick={() => removeProperty(property)}
                   />
-                </Tooltip>
               </motion.div>
             </div>
           </>

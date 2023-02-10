@@ -2,8 +2,6 @@ import React from "react";
 import "./footer.css";
 const Footer = ({ listings }) => {
 
-
-
   return (
     <div className="footer">
         

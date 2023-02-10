@@ -9,14 +9,14 @@ import {
   MenuItem,
   Badge,
 } from "@mui/material";
-import LogoutIcon from "@mui/icons-material/Logout";
+import { HiOutlineLogout } from "react-icons/hi";
+import { BsFillHeartFill } from "react-icons/bs";
 import { motion } from "framer-motion";
 import React, { useContext } from "react";
 import "./navbar.css";
 import { auth } from "../../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import FavoriteIcon from "@material-ui/icons/Favorite";
 import { PropertiesArray } from "../../App";
 import { useEffect } from "react";
 import { useState } from "react";
@@ -35,7 +35,6 @@ const Navbar = () => {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider);
   };
-
 
   const theme = createTheme({
     palette: {
@@ -104,28 +103,32 @@ const Navbar = () => {
           <a href="/">Home</a>
         </motion.li>
         {user && (
-                  <motion.li
-                  className="favorite_icon"
-                  variants={linkAnimation}
-                  whileHover={"initial"}
-                  whileTap={{ scale: 1.2 }}
-                >
-                  <Badge
-                    badgeContent={badgeContent}
-                    sx={{
-                      "& .MuiBadge-badge": {
-                        color: "black",
-                        backgroundColor: "#ADEFD1FF",
-                      },
-                    }}
-                  >
-                    <Tooltip title="Favorites">
-                      <Link to={"/favorites"}>
-                        <FavoriteIcon style={{ color: "#db243d", cursor: "pointer" }} />
-                      </Link>
-                    </Tooltip>
-                  </Badge>
-                </motion.li>
+          <motion.li
+            className="favorite_icon"
+            variants={linkAnimation}
+            whileHover={"initial"}
+            whileTap={{ scale: 1.2 }}
+          >
+            <Badge
+              badgeContent={badgeContent}
+              sx={{
+                "& .MuiBadge-badge": {
+                  color: "black",
+                  backgroundColor: "#ADEFD1FF",
+                },
+              }}
+            >
+              <Link to={"/favorites"}>
+                <BsFillHeartFill
+                  style={{
+                    color: "#db243d",
+                    cursor: "pointer",
+                    fontSize: "1.5rem",
+                  }}
+                />
+              </Link>
+            </Badge>
+          </motion.li>
         )}
         <li>
           <ThemeProvider theme={theme}>
@@ -148,7 +151,7 @@ const Navbar = () => {
                       aria-expanded={open ? "true" : undefined}
                     >
                       <Avatar sx={{ width: 45, height: 45 }}>
-                        <img src={user.photoURL} alt={user.name}/>
+                        <img src={user.photoURL} alt={user.name} />
                       </Avatar>
                     </IconButton>
                   </Tooltip>
@@ -186,7 +189,7 @@ const Navbar = () => {
                     anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
                   >
                     <MenuItem onClick={() => auth.signOut()}>
-                      <LogoutIcon /> Sign Out
+                      <HiOutlineLogout style={{fontSize: "1.5rem"}} /> Sign Out
                     </MenuItem>
                   </Menu>
                 </motion.div>
