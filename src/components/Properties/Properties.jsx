@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import CircularProgress from "@mui/material/CircularProgress";
-import { IconButton, Pagination, Tooltip } from "@mui/material";
+import { IconButton, Pagination} from "@mui/material";
 import { MdOutlineDoDisturbOn } from "react-icons/md";
 import { BsFillHeartFill } from "react-icons/bs";
 import { PropertiesArray } from "../../App";
