@@ -133,6 +133,8 @@ const Properties = ({
               <p>
                 <span>{listing.title}</span> <br></br>
                 {listing.displayable_address}
+              </p>
+              <div>
                 <p>£{listing.rental_prices["per_month"]} PCM</p>
                 {user && (
                   <motion.div
@@ -156,7 +158,7 @@ const Properties = ({
                     </IconButton>
                   </motion.div>
                 )}
-              </p>
+              </div>
             </motion.div>
           ))
         )}

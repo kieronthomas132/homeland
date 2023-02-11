@@ -9,8 +9,10 @@ import Footer from "../Footer/Footer";
 const Listings = () => {
   const { id } = useParams();
   const [listings, setListings] = useState([]);
+  const [loading, setLoading]= useState(false)
 
   useEffect(() => {
+    setLoading(true)
     const options = {
       method: "GET",
       url: "https://zoopla.p.rapidapi.com/properties/list",
@@ -28,6 +30,7 @@ const Listings = () => {
       .then(function (response) {
         console.log(response.data.listing);
         setListings(response.data.listing);
+        setLoading(false)
       })
       .catch(function (error) {
         console.error(error);

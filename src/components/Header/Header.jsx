@@ -8,8 +8,6 @@ import "./header.css";
 const Header = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-
-
   return (
     <div>
     <div className="header" ref={ref}>
