@@ -7,8 +7,6 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import { createContext } from 'react';
 import Favorites from './components/Favorites/Favorites';
 import { useState } from 'react';
-
-
 export const PropertiesArray = createContext()
 
 function App() {

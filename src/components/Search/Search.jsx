@@ -50,7 +50,7 @@ const Search = () => {
       })
       .catch(function (error) {
         console.error(
-          "an error has occured, this could be due to an expired axios requests. This should be sorted soon"
+          "an error has occurred, this could be due to an expired axios requests. This should be sorted soon"
         );
       });
   };

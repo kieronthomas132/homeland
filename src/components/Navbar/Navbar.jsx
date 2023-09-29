@@ -31,6 +31,7 @@ const Navbar = () => {
   }, [properties]);
 
   const [user] = useAuthState(auth);
+
   const googleSignIn = () => {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider);
